@@ -10,14 +10,17 @@ import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.example.courses.db.dao.ProductDao;
+import com.example.courses.db.dao.RecipeDao;
 import com.example.courses.db.entity.ProductEntity;
+import com.example.courses.db.entity.RecipeEntity;
+import com.example.courses.db.entity.RecipeProductCrossRefEntity;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {ProductEntity.class}, version = 1)
+@Database(entities = {ProductEntity.class, RecipeEntity.class, RecipeProductCrossRefEntity.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase sInstance;
 
@@ -25,6 +28,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public static final String DATABASE_NAME = "basic-sample-db";
 
     public abstract ProductDao productDao();
+    public abstract RecipeDao recipeDao();
 
     public static AppDatabase getInstance(final Context context) {
         if (sInstance == null) {

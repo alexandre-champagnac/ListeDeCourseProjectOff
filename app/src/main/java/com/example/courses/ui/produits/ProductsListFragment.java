@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
@@ -59,7 +58,7 @@ public class ProductsListFragment extends Fragment {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int productIndex = viewHolder.getAbsoluteAdapterPosition();
-                productDao.deleteById(adapter.getProductAt(productIndex).getId());
+                productDao.deleteById(adapter.getProductAt(productIndex).getProductId());
                 adapter.notifyItemRemoved(productIndex);
                 Toast.makeText(getActivity(), "Product deleted", Toast.LENGTH_SHORT).show();
             }

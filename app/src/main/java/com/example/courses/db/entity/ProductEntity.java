@@ -9,12 +9,12 @@ import com.example.courses.model.Product;
 @Entity(tableName = "products")
 public class ProductEntity implements Product {
     @PrimaryKey
-    private long id;
+    private long productId;
     private String name;
 
     @Override
-    public long getId() {
-        return id;
+    public long getProductId() {
+        return productId;
     }
 
     @Override
@@ -22,8 +22,8 @@ public class ProductEntity implements Product {
         return name;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setProductId(long productId) {
+        this.productId = productId;
     }
 
     public void setName(String name) {
@@ -34,13 +34,13 @@ public class ProductEntity implements Product {
     }
 
     @Ignore
-    public ProductEntity(long id, String name) {
-        this.id = id;
+    public ProductEntity(long productId, String name) {
+        this.productId = productId;
         this.name = name;
     }
 
     public ProductEntity(Product product) {
-        this.id = product.getId();
+        this.productId = product.getProductId();
         this.name = product.getName();
     }
 }

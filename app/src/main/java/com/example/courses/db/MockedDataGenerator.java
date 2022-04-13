@@ -14,7 +14,7 @@ public class MockedDataGenerator {
         List<ProductEntity> products = new ArrayList<>(Products.length);
         for (int i = 0; i < Products.length; i++) {
             ProductEntity product = new ProductEntity();
-            product.setId(i);
+            product.setProductId(i);
             product.setName(Products[i]);
 
             products.add(product);

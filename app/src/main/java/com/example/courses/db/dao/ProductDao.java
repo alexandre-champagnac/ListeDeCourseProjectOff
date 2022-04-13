@@ -19,10 +19,10 @@ public interface ProductDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     ListenableFuture<List<Long>> insertAll(List<ProductEntity> products);
 
-    @Query("select * from products where id = :productId")
+    @Query("select * from products where productId = :productId")
     LiveData<ProductEntity> findById(long productId);
 
-    @Query("delete from products where id = :productId")
+    @Query("delete from products where productId = :productId")
     ListenableFuture<Integer> deleteById(long productId);
 
 
