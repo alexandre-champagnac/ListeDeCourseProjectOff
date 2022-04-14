@@ -25,5 +25,10 @@
         android:name="com.example.courses.ui.produits.AddProductFragment"
         android:label="Création d'un produit"
         tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/nav_gestion_recipe"
+        android:name="com.example.courses.ui.recipe.RecipeFragment"
+        android:label="Gestion des recettes"
+        tools:layout="@layout/fragment_recipe_list" />
 
 </navigation>

@@ -48,7 +48,12 @@ public abstract class AppDatabase extends RoomDatabase {
                     @Override
                     public void onCreate(@NonNull SupportSQLiteDatabase db) {
                         super.onCreate(db);
-                        AppDatabase.getInstance(appContext).productDao().insertAll(MockedDataGenerator.generateProducts());
+                        AppDatabase database = AppDatabase.getInstance(appContext);
+                        database.productDao().insertAll(MockedDataGenerator.generateProducts());
+
+                        List<ProductEntity> products = database.productDao().findAll().getValue();
+
+                        database.recipeDao().insertAll(MockedDataGenerator.generateRecipes(products));
                     }
                 })
                 .build();

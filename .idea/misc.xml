@@ -5,7 +5,12 @@
       <map>
         <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_add_product.xml" value="0.575" />
         <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_home.xml" value="0.2796352583586626" />
+        <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_product.xml" value="0.2796352583586626" />
         <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_product_list.xml" value="0.2796352583586626" />
+        <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_recipe.xml" value="0.5" />
+        <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_recipe_list.xml" value="0.27279635258358664" />
+        <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/activity_main_drawer.xml" value="0.5469387755102041" />
+        <entry key="..\:/Users/alexc/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/main.xml" value="0.37222222222222223" />
         <entry key="..\:/workspace/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.2980072463768116" />
         <entry key="..\:/workspace/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/app_bar_main.xml" value="0.2980072463768116" />
         <entry key="..\:/workspace/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/content_main.xml" value="0.2980072463768116" />
