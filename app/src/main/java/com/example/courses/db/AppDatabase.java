@@ -15,6 +15,7 @@ import com.example.courses.db.entity.ProductEntity;
 import com.example.courses.db.entity.RecipeEntity;
 import com.example.courses.db.entity.RecipeProductCrossRefEntity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -49,11 +50,41 @@ public abstract class AppDatabase extends RoomDatabase {
                     public void onCreate(@NonNull SupportSQLiteDatabase db) {
                         super.onCreate(db);
                         AppDatabase database = AppDatabase.getInstance(appContext);
+
                         database.productDao().insertAll(MockedDataGenerator.generateProducts());
 
-                        List<ProductEntity> products = database.productDao().findAll().getValue();
 
-                        database.recipeDao().insertAll(MockedDataGenerator.generateRecipes(products));
+
+
+                        RecipeEntity recipe1 = new RecipeEntity();
+                        recipe1.setName("Chutney de fruits");
+
+                        database.recipeDao().insert(recipe1);
+
+
+
+                        RecipeProductCrossRefEntity r1 = new RecipeProductCrossRefEntity();
+
+                        r1.setRecipeId(1);
+                        r1.setProductId(1);
+
+                        RecipeProductCrossRefEntity r2 = new RecipeProductCrossRefEntity();
+
+                        r2.setRecipeId(1);
+
+                        r2.setProductId(2);
+
+                        List<RecipeProductCrossRefEntity> listRecipeProductCrossRefEntiry = new ArrayList<>();
+
+                        listRecipeProductCrossRefEntiry.add(r1);
+                        listRecipeProductCrossRefEntiry.add(r2);
+
+
+
+
+
+
+                        database.recipeDao().insertAllRecipeProductCrossRef(listRecipeProductCrossRefEntiry);
                     }
                 })
                 .build();
