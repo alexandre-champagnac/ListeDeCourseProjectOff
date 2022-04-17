@@ -1,6 +1,6 @@
 package com.example.courses.model;
 
 public interface Product {
-    long getProductId();
+    Long getProductId();
     String getName();
 }

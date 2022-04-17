@@ -7,14 +7,14 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "recipe")
 public class RecipeEntity {
     @PrimaryKey
-    private long recipeId;
+    private Long recipeId;
     private String name;
 
-    public long getRecipeId() {
+    public Long getRecipeId() {
         return recipeId;
     }
 
-    public void setRecipeId(long recipeId) {
+    public void setRecipeId(Long recipeId) {
         this.recipeId = recipeId;
     }
 

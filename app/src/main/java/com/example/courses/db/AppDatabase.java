@@ -65,14 +65,14 @@ public abstract class AppDatabase extends RoomDatabase {
 
                         RecipeProductCrossRefEntity r1 = new RecipeProductCrossRefEntity();
 
-                        r1.setRecipeId(1);
-                        r1.setProductId(1);
+                        r1.setRecipeId(1L);
+                        r1.setProductId(1L);
 
                         RecipeProductCrossRefEntity r2 = new RecipeProductCrossRefEntity();
 
-                        r2.setRecipeId(1);
+                        r2.setRecipeId(1L);
 
-                        r2.setProductId(2);
+                        r2.setProductId(2L);
 
                         List<RecipeProductCrossRefEntity> listRecipeProductCrossRefEntiry = new ArrayList<>();
 
